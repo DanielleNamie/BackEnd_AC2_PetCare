@@ -17,7 +17,7 @@ public class Veterinario {
     private String especialidade;
 
     @OneToMany(mappedBy = "veterinario")
-    @JsonManagedReference
+    @JsonManagedReference("veterinario-consultas")
     @Builder.Default
     private List<Consulta> consultas = new ArrayList<>();
 }

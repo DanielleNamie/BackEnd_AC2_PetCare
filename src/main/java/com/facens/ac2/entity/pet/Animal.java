@@ -22,7 +22,7 @@ public class Animal {
     private Tutor tutor;
 
     @OneToMany(mappedBy = "animal")
-    @JsonManagedReference
+    @JsonManagedReference("animal-consultas")
     @Builder.Default
     private List<Consulta> consultas = new ArrayList<>();
 }

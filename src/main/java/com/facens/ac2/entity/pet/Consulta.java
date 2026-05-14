@@ -12,11 +12,11 @@ public class Consulta {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
-    @JsonBackReference
+    @JsonBackReference("animal-consultas")
     private Animal animal;
 
     @ManyToOne
-    @JsonBackReference
+    @JsonBackReference("veterinario-consultas")
     private Veterinario veterinario;
     
     private LocalDateTime dataHora;
